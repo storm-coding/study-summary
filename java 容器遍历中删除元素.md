@@ -164,3 +164,9 @@ while (it.hasNext()) {
 ```
 这段代码和之前唯一不一样的地方就在于remove的时候使用迭代器的remove。原因和上面代码分析所述，在进行元素删除之后会将当前的索引下标重新赋值给游标cursor，所以遍历丢失。后面还有进行expectedModCount = modCount;所以也不会抛出ConcurrentModificationException异常。
 
+#### 总结
+以上分析的是ArrayList，其他java容器类，类似。
+
+在java容器中的遍历：
+ - 增强for不要做元素删除、添加等操作
+ - 普通for循环，如果删除操作需要自己控制当前循环的索引，或者从后往前进行
