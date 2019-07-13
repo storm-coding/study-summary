@@ -3,7 +3,7 @@
     之前只是模糊的知道，在java中使用for、增强for循环时不能进行删除操作。但是一直不知道是为什么。
     直到，最近在工作当中遇到，就决定分析一下这是什么原因。
 
-####普通for循环
+#### 普通for循环
 ```
     List<String> list = new ArrayList<>();
     list.add("a");
